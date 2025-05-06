@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gimnasio Arena Trek</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Arena Trek</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Arena Trek Logo" class="logo">
+
+<header>
+    <div class="logo-container">
+        <img src="https://via.placeholder.com/100x100.png?text=Logo" alt="Arena Trek Logo" class="logo">
         <h1>Transforma Tu Vida</h1>
-    </header>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#membresias">Membresías</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-   <nav>
-    <ul class="nav-list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
-
-    <section class="banner">
-        <h1>¡Bienvenido a Arena Trek!</h1>
+<!-- Banner Principal con Fondo Parallax -->
+<section class="banner">
+    <div class="banner-content">
+        <h1>Bienvenido a Arena Trek</h1>
         <p>Transforma tu cuerpo, transforma tu vida</p>
-        <a href="cursos.html" class="btn">Ver Cursos</a>
-    </section>
+        <a href="#cursos" class="cta-button">Ver Cursos</a>
+    </div>
+</section>
 
-    <section id="horarios" class="horarios-section">
-        <h2>¡Horarios de Entrenamiento!</h2>
-        <div class="horarios-container">
-            <div class="horario">
-                <h3>Lunes - Viernes</h3>
-                <p>6:00 AM - 8:00 PM</p>
-            </div>
-            <div class="horario">
-                <h3>Sábados</h3>
-                <p>8:00 AM - 2:00 PM</p>
-            </div>
-            <div class="horario">
-                <h3>Domingos</h3>
-                <p>Cerrado</p>
-            </div>
+<!-- Horarios -->
+<section id="horarios">
+    <h2>Horarios de Entrenamiento</h2>
+    <div class="horarios-container">
+        <div class="horario">
+            <h3>Lunes - Viernes</h3>
+            <p>6:00 AM - 8:00 PM</p>
         </div>
-
-        <h2>Precios y Membresías</h2>
-        <div class="precio-container">
-            <h3>Membresía Mensual: ₡30,000</h3>
-            <p>¡La matrícula es GRATIS! Únete hoy mismo a Arena Trek.</p>
+        <div class="horario">
+            <h3>Sábados</h3>
+            <p>8:00 AM - 2:00 PM</p>
         </div>
-    </section>
-
-    <section id="cursos">
-        <h2>Cursos Destacados</h2>
-        <div class="tarjetas">
-            <div class="card">
-                <img src="trampolines.jpg" alt="Taller Trampolines">
-                <div class="card-body">
-                    <h3>Taller Trampolines</h3>
-                    <a href="cursos.html" class="btn">Ver más</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="funcional.jpg" alt="Entrenamiento Funcional">
-                <div class="card-body">
-                    <h3>Entrenamiento Funcional</h3>
-                    <a href="cursos.html" class="btn">Ver más</a>
-                </div>
-            </div>
+        <div class="horario">
+            <h3>Domingos</h3>
+            <p>Cerrado</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="beneficios">
-        <h2>Programas Nutricionales</h2>
-        <p>Obtén beneficios adicionales al inscribirte en nuestros programas de nutrición y bienestar.</p>
-    </section>
-
-    <section id="contacto" class="contacto">
-        <h2>Contáctanos</h2>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/ARENATREK/?locale=es_LA" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="https://www.instagram.com/arenatrekgym/?hl=es-la" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=50684891888&text=Hola!%20Quiero%20más%20info" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+<!-- Membresías -->
+<section id="membresias">
+    <h2>Membresías y Precios</h2>
+    <div class="precio-container">
+        <div class="precio">
+            <h3>Membresía Mensual</h3>
+            <p>₡30,000</p>
+            <p>¡La matrícula es GRATIS!</p>
         </div>
-        <p>WhatsApp: <a href="https://wa.me/50685482304">8548-2304</a></p>
-        <p>Teléfono: 4035-6625</p>
-        <div class="auth-buttons">
-            <button onclick="alert('Función de registro próximamente')">Registrarse</button>
-            <button onclick="alert('Función de inicio de sesión próximamente')">Iniciar Sesión</button>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Gimnasio Arena Trek. Todos los derechos reservados.</p>
-    </footer>
+<!-- Cursos Disponibles -->
+<section id="cursos">
+    <h2>Cursos Disponibles</h2>
+    <div class="cursos-container">
+        <div class="curso">
+            <img src="https://via.placeholder.com/300x200.png?text=Curso+Trampolines" alt="Taller de Trampolines">
+            <p>Taller de Trampolines</p>
+        </div>
+        <div class="curso">
+            <img src="https://via.placeholder.com/300x200.png?text=Entrenamiento+Funcional" alt="Entrenamiento Funcional">
+            <p>Entrenamiento Funcional</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto">
+    <h2>Contáctanos</h2>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/ARENATREK/?locale=es_LA" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/arenatrekgym/?hl=es-la" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=50684891888&text=Enlace..." target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+    </div>
+    <p>WhatsApp: <a href="https://wa.me/50685482304">8548-2304</a></p>
+    <p>Teléfono: 4035-6625</p>
+</section>
+
+<!-- Pie de Página -->
+<footer>
+    <p>© 2025 Arena Trek - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
