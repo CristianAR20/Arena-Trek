@@ -1,222 +1,214 @@
-/* Global Styles */
+/* Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0b0b0b;
-    color: #d0ffd0;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Encabezado */
 header {
-    background-color: #111;
-    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #00ff80;
 }
 
-.logo {
-    width: 200px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: #fff;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav a {
-    color: #00ff80;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    padding: 8px 12px;
-}
-
-nav a:hover {
-    background-color: #00ff80;
-    color: #111;
-    border-radius: 5px;
-}
-
-/* Banner */
-.banner {
-    background-image: url('ruta/a/tu/imagen.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
+header .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+header .logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Menú de Navegación */
+nav {
+    background-color: #444;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 14px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #28a745;
+}
+
+/* Banner Principal con Fondo Parallax */
+.banner {
+    background-image: url('https://via.placeholder.com/1500x800.png?text=Fondo+Arena+Trek');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    padding: 20px;
-    border-bottom: 2px solid #00ff80;
 }
 
 .banner h1 {
     font-size: 3rem;
-    font-weight: bold;
+    margin: 0;
 }
 
 .banner p {
     font-size: 1.5rem;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-.banner .cta-button {
-    margin-top: 20px;
-    background-color: #00ff80;
+.cta-button {
+    background-color: #28a745;
+    color: white;
     padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #111;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.banner .cta-button:hover {
-    background-color: #00cc66;
+.cta-button:hover {
+    background-color: #218838;
 }
 
-/* Section */
+/* Secciones */
 section {
     padding: 40px 20px;
     text-align: center;
 }
 
-/* Cursos y Beneficios */
-#cursos, #beneficios {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Horarios */
+#horarios {
+    background-color: #e9ecef;
 }
 
-#cursos img, #beneficios img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
+.horarios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-#cursos h2, #beneficios h2 {
-    font-size: 2.5rem;
-    color: #00ff80;
-    margin-bottom: 20px;
-}
-
-/* Cards for Courses */
-.card {
-    display: inline-block;
-    width: 45%;
-    margin: 20px 2%;
-    background-color: #222;
+.horario {
+    background-color: #28a745;
+    color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.card-body {
-    padding: 15px;
-    text-align: center;
-}
-
-.card-body h3 {
-    font-size: 1.8rem;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.card-body p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-.card-body .btn {
-    margin-top: 10px;
-    background-color: #00ff80;
-    padding: 10px 20px;
-    color: #111;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 30%;
 }
 
-.card-body .btn:hover {
-    background-color: #00cc66;
+.horario h3 {
+    font-size: 1.5rem;
 }
 
-/* Contact Section */
-#contacto {
-    background-color: #111;
-    color: white;
-    padding: 40px 20px;
-    border-top: 2px solid #00ff80;
+.horario p {
+    font-size: 1.2rem;
 }
 
-#contacto h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* Membresías */
+#membresias {
+    background-color: #fff;
 }
 
-#contacto a {
-    margin: 10px;
-    color: white;
-    font-size: 2rem;
+.precio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-#contacto a:hover {
-    color: #00ff80;
-}
-
-/* Footer */
-footer {
-    background-color: #111;
+.precio {
+    background-color: #28a745;
     color: white;
     padding: 20px;
+    border-radius: 5px;
+    width: 30%;
     text-align: center;
-    border-top: 2px solid #00ff80;
 }
 
-footer p {
-    font-size: 1rem;
+.precio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        margin: 20px 0;
-    }
+/* Cursos */
+#cursos {
+    background-color: #f8f9fa;
+}
 
-    .banner {
-        height: 350px;
-    }
+.cursos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .banner h1 {
-        font-size: 2rem;
-    }
+.curso {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
 
-    .banner p {
-        font-size: 1.2rem;
-    }
+.curso img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.curso p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Contacto */
+#contacto {
+    background-color: #fff;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.social-icons a:hover {
+    color: #28a745;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
