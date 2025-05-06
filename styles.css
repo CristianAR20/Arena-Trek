@@ -152,3 +152,16 @@ footer {
     color: white;
     text-align: center;
 }
+.cta-button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
