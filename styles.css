@@ -229,3 +229,19 @@ nav a:hover {
 .elemento-animado {
     animation: slideIn 1s ease-out;
 }
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
