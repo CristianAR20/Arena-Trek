@@ -1,10 +1,8 @@
 /* Estilos Generales */
-body {
-    font-family: 'Arial', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Encabezado */
@@ -39,6 +37,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -55,31 +54,39 @@ nav ul li a:hover {
     background-color: #28a745;
 }
 
-/* Banner Principal con Fondo Parallax */
+/* Banner Principal con Video de Fondo */
 .banner {
-    background-image: url('https://via.placeholder.com/1500x800.png?text=Fondo+Arena+Trek');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
     position: relative;
-    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    position: relative;
+    z-index: 1;
     color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
 }
 
-.banner h1 {
+.banner-content h1 {
     font-size: 3rem;
     margin: 0;
 }
 
-.banner p {
+.banner-content p {
     font-size: 1.5rem;
     margin: 10px 0;
 }
@@ -96,119 +103,13 @@ nav ul li a:hover {
     background-color: #218838;
 }
 
-/* Secciones */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2rem;
+    }
 
-/* Horarios */
-#horarios {
-    background-color: #e9ecef;
-}
-
-.horarios-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.horario {
-    background-color: #28a745;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 30%;
-}
-
-.horario h3 {
-    font-size: 1.5rem;
-}
-
-.horario p {
-    font-size: 1.2rem;
-}
-
-/* Membresías */
-#membresias {
-    background-color: #fff;
-}
-
-.precio-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.precio {
-    background-color: #28a745;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 30%;
-    text-align: center;
-}
-
-.precio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-/* Cursos */
-#cursos {
-    background-color: #f8f9fa;
-}
-
-.cursos-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.curso {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 30%;
-    text-align: center;
-    padding: 20px;
-}
-
-.curso img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.curso p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Contacto */
-#contacto {
-    background-color: #fff;
-}
-
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    font-size: 2rem;
-    color: #333;
-}
-
-.social-icons a:hover {
-    color: #28a745;
-}
-
-/* Pie de Página */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    .banner-content p {
+        font-size: 1rem;
+    }
 }
