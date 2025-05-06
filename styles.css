@@ -140,3 +140,15 @@ footer {
 .btn:hover {
     background-color: #218838;
 }
+.banner {
+    background-image: url('ruta/a/tu/imagen.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
