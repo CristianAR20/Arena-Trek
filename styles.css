@@ -4,8 +4,6 @@ body {
     color: #d0ffd0;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Esto mantiene el flujo vertical, pero si lo deseas horizontal puedes usar 'row' */
 }
 
 header {
@@ -14,12 +12,15 @@ header {
     background-color: #111;
 }
 
+.logo {
+    width: 200px;
+}
+
 nav {
     display: flex;
     justify-content: center;
     background-color: #1a1a1a;
     padding: 10px;
-    width: 100%; /* Asegura que el menú ocupe todo el ancho */
 }
 
 nav a {
@@ -28,59 +29,34 @@ nav a {
     text-decoration: none;
 }
 
-.banner {
-    background-image: url('ruta/a/tu/imagen.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-.banner h1 {
-    font-size: 3rem;
-    animation: fadeIn 1.5s ease-out;
-}
-
-.banner p {
-    font-size: 1.5rem;
-    animation: fadeIn 2s ease-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
+/* Use flexbox for sections to align horizontally */
 section {
     display: flex;
+    flex-wrap: wrap;  /* Allows content to wrap in smaller screens */
     justify-content: space-between;
     padding: 20px;
+    border-bottom: 1px solid #444;
 }
 
-#horarios .horarios-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+section img {
+    max-width: 45%; /* Make images take up less width */
+    margin: 10px 0;
+    border: 2px solid #00ff80;
+    border-radius: 10px;
 }
 
+/* Ensure cards display side by side */
 .card {
-    width: 300px;
+    width: 45%; /* Makes each card 45% of the container width */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
+    margin: 20px 0;
     transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Card hover effect */
 }
 
 .card img {
@@ -98,23 +74,32 @@ section {
     font-size: 1.5rem;
 }
 
-footer {
+/* Banner styling */
+.banner {
+    background-image: url('ruta/a/tu/imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    padding: 15px;
-    background-color: #111;
-    color: #999;
+    padding: 20px;
 }
 
+/* Media query adjustments */
 @media (max-width: 768px) {
-    .banner {
-        height: 300px;
-    }
-    
     section {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements vertically for smaller screens */
     }
 
-    nav {
-        flex-direction: column;
+    .card {
+        width: 100%; /* Make cards full width in mobile view */
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px;
     }
 }
