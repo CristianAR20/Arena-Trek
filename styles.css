@@ -3,61 +3,58 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: #111;
 }
 
 /* Encabezado */
 header {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-container h1 {
-    font-size: 1.5em;
-    color: #00ff88;
-}
-
-.logo {
+header .logo {
     width: 60px;
     height: auto;
 }
 
 /* Menú de Navegación */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0 0 0;
+nav {
+    background-color: #444;
+    overflow: hidden;
 }
 
-nav a {
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    padding: 14px 20px;
+}
+
+nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background 0.3s;
+    text-align: center;
 }
 
-nav a:hover {
-    background-color: #00ff88;
-    color: black;
-    border-radius: 5px;
+nav ul li a:hover {
+    background-color: #28a745;
 }
 
-/* Banner Principal */
+/* Banner Principal con Video de Fondo */
 .banner {
     position: relative;
     height: 100vh;
@@ -75,112 +72,88 @@ nav a:hover {
 }
 
 .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 1;
+    color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
 }
 
 .banner-content h1 {
-    font-size: 2.5em;
-    margin: 0 0 10px;
-    color: #00ff88;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .banner-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .cta-button {
-    padding: 12px 25px;
-    background: #00ff88;
-    color: #000;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
 }
 
 .cta-button:hover {
-    background-color: #00cc66;
-    color: #fff;
+    background-color: #218838;
 }
 
 /* Secciones */
 section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
+h2 {
+    font-size: 2.5rem;
+    color: #333;
 }
 
-/* Contenedores */
-.horarios-container, .precio-container, .cursos-container {
+/* Cursos Disponibles */
+.cursos-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.horario, .precio, .curso {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
+.curso {
+    text-align: center;
+    width: 300px;
 }
 
 .curso img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Redes Sociales */
-.social-icons a {
-    margin: 0 10px;
-    color: white;
+.curso p {
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
-.social-icons a:hover {
-    color: #00ff88;
-}
-
-/* Pie de página */
-footer {
-    background: #000;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 1px solid #444;
-}
-
-/* Responsivo */
+/* Media Queries para Responsividad */
 @media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
+    .banner-content h1 {
+        font-size: 2rem;
     }
 
-    nav ul {
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .cursos-container {
         flex-direction: column;
         gap: 10px;
     }
 
-    .banner-content h1 {
-        font-size: 2em;
-    }
-
-    .banner-content p {
-        font-size: 1em;
-    }
-
-    .horario, .precio, .curso {
-        width: 90%;
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
     }
 }
