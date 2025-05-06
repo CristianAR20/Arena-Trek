@@ -53,3 +53,31 @@ footer {
     background-color: #111;
     color: #999;
 }
+.banner {
+    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta por tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Ajusta la altura del banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
