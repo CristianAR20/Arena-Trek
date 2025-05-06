@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #0b0b0b;
@@ -6,38 +5,46 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     text-align: center;
     padding: 20px;
     background-color: #111;
 }
+
 .logo {
     width: 200px;
 }
+
 nav {
     display: flex;
     justify-content: center;
     background-color: #1a1a1a;
     padding: 10px;
 }
+
 nav a {
     margin: 0 15px;
     color: #00ff80;
     text-decoration: none;
 }
+
 section {
     padding: 20px;
     border-bottom: 1px solid #444;
 }
+
 h2 {
     color: #00ff80;
 }
+
 img {
     max-width: 90%;
     margin: 10px 0;
     border: 2px solid #00ff80;
     border-radius: 10px;
 }
+
 .auth-buttons button {
     background-color: #00ff80;
     color: black;
@@ -47,6 +54,7 @@ img {
     border-radius: 8px;
     cursor: pointer;
 }
+
 footer {
     text-align: center;
     padding: 15px;
@@ -54,12 +62,12 @@ footer {
     color: #999;
 }
 
-=======
+/* Banner */
 .banner {
-    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta por tu imagen */
+    background-image: url('https://s1.abcstatics.com/abc/www/multimedia/bienestar/2023/04/19/AdobeStock_90212267-RMyGoGaFY2Tan8BncOj0brL-1200x840@abc.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
-    height: 600px; /* Ajusta la altura del banner */
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,11 +91,13 @@ footer {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+/* Menú de navegación */
 .nav {
     position: sticky;
     top: 0;
-    background-color: #333; /* Color de fondo del menú */
-    z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+    background-color: #333;
+    z-index: 1000;
 }
 
 .nav a {
@@ -98,93 +108,11 @@ footer {
 }
 
 .nav a:hover {
-    background-color: #28a745; /* Color al pasar el ratón */
-    color: white;
-}
-.card {
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-body h3 {
-    font-size: 1.5rem;
-}
-
-.btn {
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #218838;
-}
-.banner {
-    background-image: url('ruta/a/tu/imagen.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-.cta-button {
-    background-color: #28a745; /* Verde */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #218838;
-}
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 10px;
-    z-index: 1000;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #575757;
-}
+/* Tarjetas */
 .tarjetas {
     display: flex;
     justify-content: space-around;
@@ -193,14 +121,13 @@ nav a:hover {
 }
 
 .card {
+    width: 280px;
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
     margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -214,53 +141,32 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.card-body {
+    text-align: center;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+}
+
 .card a {
     color: #28a745;
     text-decoration: none;
     font-weight: bold;
 }
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 
-.elemento-animado {
-    animation: slideIn 1s ease-out;
-}
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    text-decoration: underline;
-}
 @media (max-width: 768px) {
     .tarjetas {
         flex-direction: column;
         align-items: center;
     }
-
-    nav a {
-        padding: 10px;
-        font-size: 16px;
-    }
 }
+
+/* Horarios */
 #horarios {
-  background-image: url('ruta/a/tu/imagen.jpg');
+  background-image: url('https://s1.abcstatics.com/abc/www/multimedia/bienestar/2023/04/19/AdobeStock_90212267-RMyGoGaFY2Tan8BncOj0brL-1200x840@abc.jpg');
   background-size: cover;
+  background-position: center;
   padding: 50px 0;
   text-align: center;
   color: white;
@@ -274,7 +180,7 @@ footer {
 }
 
 .horario {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -290,6 +196,29 @@ h2, h3 {
   font-weight: bold;
   color: #00FF00;
 }
-background-image: url('https://s1.abcstatics.com/abc/www/multimedia/bienestar/2023/04/19/AdobeStock_90212267-RMyGoGaFY2Tan8BncOj0brL-1200x840@abc.jpg');
-background-size: cover;  /* Para asegurar que la imagen cubra todo el fondo */
-background-position: center center;  /* Para centrar la imagen */
+
+/* Botón CTA */
+.cta-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+/* Iconos sociales */
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
