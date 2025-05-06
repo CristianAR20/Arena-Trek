@@ -4,6 +4,8 @@ body {
     color: #d0ffd0;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Esto mantiene el flujo vertical, pero si lo deseas horizontal puedes usar 'row' */
 }
 
 header {
@@ -12,15 +14,12 @@ header {
     background-color: #111;
 }
 
-.logo {
-    width: 200px;
-}
-
 nav {
     display: flex;
     justify-content: center;
     background-color: #1a1a1a;
     padding: 10px;
+    width: 100%; /* Asegura que el menú ocupe todo el ancho */
 }
 
 nav a {
@@ -29,48 +28,14 @@ nav a {
     text-decoration: none;
 }
 
-section {
-    padding: 20px;
-    border-bottom: 1px solid #444;
-}
-
-h2 {
-    color: #00ff80;
-}
-
-img {
-    max-width: 90%;
-    margin: 10px 0;
-    border: 2px solid #00ff80;
-    border-radius: 10px;
-}
-
-.auth-buttons button {
-    background-color: #00ff80;
-    color: black;
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #111;
-    color: #999;
-}
-
-/* Banner */
 .banner {
-    background-image: url('https://s1.abcstatics.com/abc/www/multimedia/bienestar/2023/04/19/AdobeStock_90212267-RMyGoGaFY2Tan8BncOj0brL-1200x840@abc.jpg'); /* Imagen de fondo */
+    background-image: url('ruta/a/tu/imagen.jpg'); 
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 400px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
     padding: 20px;
@@ -92,56 +57,40 @@ footer {
     100% { opacity: 1; }
 }
 
-/* Menú de navegación */
-.nav {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    z-index: 1000;
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.nav a {
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.nav a:hover {
-    background-color: #28a745;
-    color: white;
-}
-
-/* Tarjetas */
-.tarjetas {
+#horarios .horarios-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
 }
 
 .card {
-    width: 280px;
-    background-color: #f4f4f4;
-    padding: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-body {
+    padding: 20px;
     text-align: center;
 }
 
@@ -149,76 +98,23 @@ footer {
     font-size: 1.5rem;
 }
 
-.card a {
-    color: #28a745;
-    text-decoration: none;
-    font-weight: bold;
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: #999;
 }
 
 @media (max-width: 768px) {
-    .tarjetas {
-        flex-direction: column;
-        align-items: center;
+    .banner {
+        height: 300px;
     }
-}
+    
+    section {
+        flex-direction: column;
+    }
 
-/* Horarios */
-#horarios {
-  background-image: url('https://s1.abcstatics.com/abc/www/multimedia/bienestar/2023/04/19/AdobeStock_90212267-RMyGoGaFY2Tan8BncOj0brL-1200x840@abc.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 50px 0;
-  text-align: center;
-  color: white;
-}
-
-.horarios-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.horario {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-h2, h3 {
-  font-weight: bold;
-}
-
-.precio {
-  font-size: 36px;
-  font-weight: bold;
-  color: #00FF00;
-}
-
-/* Botón CTA */
-.cta-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #218838;
-}
-
-/* Iconos sociales */
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    text-decoration: underline;
+    nav {
+        flex-direction: column;
+    }
 }
