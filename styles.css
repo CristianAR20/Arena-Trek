@@ -217,3 +217,15 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
 }
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.elemento-animado {
+    animation: slideIn 1s ease-out;
+}
