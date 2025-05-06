@@ -53,3 +53,209 @@ footer {
     background-color: #111;
     color: #999;
 }
+<<<<<<< HEAD
+=======
+.banner {
+    background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta por tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Ajusta la altura del banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: #333; /* Color de fondo del menú */
+    z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+}
+
+.nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav a:hover {
+    background-color: #28a745; /* Color al pasar el ratón */
+    color: white;
+}
+.card {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+.banner {
+    background-image: url('ruta/a/tu/imagen.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.cta-button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.elemento-animado {
+    animation: slideIn 1s ease-out;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+>>>>>>> 761cbda5ce932502a001e480353bc03c7c21512c
