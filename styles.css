@@ -53,7 +53,7 @@ footer {
     background-color: #111;
     color: #999;
 }
-<<<<<<< HEAD
+
 =======
 .banner {
     background-image: url('ruta/a/tu/imagen.jpg'); /* Cambia la ruta por tu imagen */
@@ -257,4 +257,36 @@ footer {
         padding: 10px;
         font-size: 16px;
     }
+}
+#horarios {
+  background-image: url('ruta/a/tu/imagen.jpg');
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+.horarios-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.horario {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+  font-weight: bold;
+}
+
+.precio {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00FF00;
 }
